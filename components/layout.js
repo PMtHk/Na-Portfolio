@@ -6,7 +6,7 @@ import Footer from "./footer";
 export default function Layout({ children }) {
   // 컨테이너 처럼 사용된다.
   return (
-    <div>
+    <div className="bg-primary">
       <Header />
       <div>{children}</div>
       <Footer />
