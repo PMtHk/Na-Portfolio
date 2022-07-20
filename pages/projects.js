@@ -45,7 +45,7 @@ export async function getStaticProps() {
       sorts: [
         {
           property: "Name",
-          direction: "descending",
+          direction: "ascending",
         },
       ],
       page_size: 100,
