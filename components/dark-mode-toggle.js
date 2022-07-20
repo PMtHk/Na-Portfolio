@@ -18,7 +18,8 @@ export default function DarkModeToggleButton() {
           dark:hover:bg-slate-700
           hover:text-orange-500
           rounded text-base mt-4 md:mt-0
-          dark:hover:text-yellow-300"
+          dark:hover:text-yellow-300
+          "
         type="button"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >

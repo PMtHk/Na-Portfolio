@@ -1,26 +1,38 @@
-import Head from "next/head";
 import Layout from "../components/layout";
+import Head from "next/head";
 import { TOKEN, DATABASE_ID } from "../config";
+import ProjectItem from "../components/projects/project-item";
 
 export default function Projects({ projects }) {
+  console.log(projects);
+
   return (
     <Layout>
-      <Head>
-        <title>나주엽 포트폴리오</title>
-        <meta name="description" content="Next.js를 이용한 포트폴리오" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <h1>{projects.results.length} 개의 프로젝트</h1>
+      <div className="flex flex-col items-center justify-center min-h-screen mb-10 px-3">
+        <Head>
+          <title>나주엽 포트폴리오</title>
+          <meta name="description" content="나주엽 포트폴리오" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <h1 className="text-4xl font-bold lg:text-6xl">
+          <span className="pl-4 text-blue-500">
+            {projects.results.length}개
+          </span>{" "}
+          의 프로젝트
+        </h1>
 
-      {projects.results.map((aProject) => (
-        <h1>{aProject.properties.Name.title[0].plain_text}</h1>
-      ))}
+        <div className="grid grid-cols-1 lg:grid-cols-2 p-12 m-4 gap-8">
+          {projects.results.map((aProject) => (
+            <ProjectItem key={aProject.id} data={aProject} />
+          ))}
+        </div>
+      </div>
     </Layout>
   );
 }
 
+// 빌드 타임에 호출
 export async function getStaticProps() {
-  // Notion Query a db
   const options = {
     method: "POST",
     headers: {
@@ -33,7 +45,7 @@ export async function getStaticProps() {
       sorts: [
         {
           property: "Name",
-          direction: "ascending",
+          direction: "descending",
         },
       ],
       page_size: 100,
@@ -48,8 +60,10 @@ export async function getStaticProps() {
   const projects = await res.json();
 
   const projectNames = projects.results.map(
-    (aProject) => aProject.properties.Name.title[0].plain_text
+    (aProject) => aProject.properties.Name.title[0]?.plain_text
   );
+
+  console.log(`projectNames : ${projectNames}`);
 
   return {
     props: { projects }, // will be passed to the page component as props
