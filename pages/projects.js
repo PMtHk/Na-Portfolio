@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Layout from "../components/layout";
+import { TOKEN, DATABASE_ID } from "../config";
 
-export default function Projects() {
+export default function Projects({ projects }) {
   return (
     <Layout>
       <Head>
@@ -9,7 +10,48 @@ export default function Projects() {
         <meta name="description" content="Next.js를 이용한 포트폴리오" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>프로젝트</h1>
+      <h1>{projects.results.length} 개의 프로젝트</h1>
+
+      {projects.results.map((aProject) => (
+        <h1>{aProject.properties.Name.title[0].plain_text}</h1>
+      ))}
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  // Notion Query a db
+  const options = {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Notion-Version": "2022-02-22",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${TOKEN}`,
+    },
+    body: JSON.stringify({
+      sorts: [
+        {
+          property: "Name",
+          direction: "ascending",
+        },
+      ],
+      page_size: 100,
+    }),
+  };
+
+  const res = await fetch(
+    `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
+    options
+  );
+
+  const projects = await res.json();
+
+  const projectNames = projects.results.map(
+    (aProject) => aProject.properties.Name.title[0].plain_text
+  );
+
+  return {
+    props: { projects }, // will be passed to the page component as props
+  };
 }
