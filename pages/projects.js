@@ -21,7 +21,7 @@ export default function Projects({ projects }) {
           의 프로젝트
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 p-12 m-4 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 p-12 m-4 gap-8">
           {projects.results.map((aProject) => (
             <ProjectItem key={aProject.id} data={aProject} />
           ))}
