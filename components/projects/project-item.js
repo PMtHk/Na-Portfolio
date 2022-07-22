@@ -29,10 +29,10 @@ export default function ProjectItem({ data }) {
         <p className="my-1 ">
           작업기간 : {start} ~ {end}
         </p>
-        <div className="flex items-start flex-row mt-2">
+        <div className="flex items-start flex-wrap mt-2">
           {tags.map((aTag) => (
             <h1
-              className="px-2 py-1 mr-1 rounded-lg bg-sky-200 dark:bg-sky-700 w-30"
+              className="px-2 py-1 mr-1 my-1 rounded-lg bg-sky-200 dark:bg-sky-700 w-30"
               key={aTag.id}
             >
               {aTag.name}
