@@ -1,27 +1,27 @@
-import Layout from "../components/layout";
-import Head from "next/head";
-import { TOKEN, DATABASE_ID } from "../config";
-import ProjectItem from "../components/projects/project-item";
+import Layout from '../components/layout';
+import Head from 'next/head';
+import { TOKEN, DATABASE_ID } from '../config';
+import ProjectItem from '../components/projects/project-item';
 
 export default function Projects({ projects }) {
   console.log(projects);
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen mb-10 px-3">
+      <div className='flex flex-col items-center justify-center min-h-screen mb-10 px-3'>
         <Head>
           <title>나주엽 포트폴리오</title>
-          <meta name="description" content="나주엽 포트폴리오" />
-          <link rel="icon" href="/favicon.ico" />
+          <meta name='description' content='나주엽 포트폴리오' />
+          <link rel='icon' href='/favicon.ico' />
         </Head>
-        <h1 className="text-4xl font-bold lg:text-6xl">
-          <span className="pl-4 text-blue-500">
+        <h1 className='text-4xl font-bold lg:text-6xl'>
+          <span className='pl-4 text-blue-500'>
             {projects.results.length}개
-          </span>{" "}
+          </span>{' '}
           의 프로젝트
         </h1>
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 p-12 m-4 gap-8">
+        <div className='grid grid-cols-1 xl:grid-cols-2 p-12 m-4 gap-8'>
           {projects.results.map((aProject) => (
             <ProjectItem key={aProject.id} data={aProject} />
           ))}
@@ -32,20 +32,20 @@ export default function Projects({ projects }) {
 }
 
 // 빌드 타임에 호출
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const options = {
-    method: "POST",
+    method: 'POST',
     headers: {
-      Accept: "application/json",
-      "Notion-Version": "2022-02-22",
-      "Content-Type": "application/json",
+      Accept: 'application/json',
+      'Notion-Version': '2022-02-22',
+      'Content-Type': 'application/json',
       Authorization: `Bearer ${TOKEN}`,
     },
     body: JSON.stringify({
       sorts: [
         {
-          property: "Name",
-          direction: "ascending",
+          property: 'Name',
+          direction: 'ascending',
         },
       ],
       page_size: 100,
