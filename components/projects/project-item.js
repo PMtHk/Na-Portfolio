@@ -4,7 +4,10 @@ export default function ProjectItem({ data }) {
   const title = data.properties.Name.title[0]?.plain_text;
   const github = data.properties.Github.url;
   const description = data.properties.Description.rich_text[0]?.plain_text;
-  const imgSrc = data?.cover?.file.url || data?.cover?.external.url;
+  const imgSrc =
+    data?.cover?.file?.url ||
+    data?.cover?.external?.url ||
+    'https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80';
   const tags = data.properties.Tags?.multi_select;
   const start = data.properties.WorkPeriod?.date?.start;
   const end = data.properties.WorkPeriod?.date?.end;
