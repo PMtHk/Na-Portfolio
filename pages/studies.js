@@ -4,7 +4,6 @@ import { TOKEN, PDATABASE_ID, SDATABASE_ID } from '../config';
 import StudyItem from '../components/studies/study-item';
 
 export default function Studies({ studies }) {
-  console.log(SDATABASE_ID);
 
   return (
     <Layout>
