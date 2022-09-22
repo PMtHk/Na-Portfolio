@@ -1,9 +1,11 @@
 import Layout from '../components/layout';
 import Head from 'next/head';
 import { TOKEN, PDATABASE_ID, SDATABASE_ID } from '../config';
-import ProjectItem from '../components/projects/project-item';
+import StudyItem from '../components/studies/study-item';
 
-export default function Projects({ projects }) {
+export default function Studies({ studies }) {
+  console.log(SDATABASE_ID);
+
   return (
     <Layout>
       <div className='flex flex-col items-center justify-center min-h-screen mb-10 px-3'>
@@ -13,15 +15,13 @@ export default function Projects({ projects }) {
           <link rel='icon' href='/favicon.ico' />
         </Head>
         <h1 className='text-4xl font-bold lg:text-6xl mt-3'>
-          <span className='pl-4 text-blue-500'>
-            {projects.results.length}개
-          </span>{' '}
-          의 프로젝트
+          <span className='pl-4 text-blue-500'>{studies.results.length}개</span>{' '}
+          의 스터디
         </h1>
 
         <div className='grid grid-cols-1 xl:grid-cols-2 p-12 m-4 gap-8'>
-          {projects.results.map((aProject) => (
-            <ProjectItem key={aProject.id} data={aProject} />
+          {studies.results.map((aStudy) => (
+            <StudyItem key={aStudy.id} data={aStudy} />
           ))}
         </div>
       </div>
@@ -51,17 +51,17 @@ export async function getServerSideProps() {
   };
 
   const res = await fetch(
-    `https://api.notion.com/v1/databases/${PDATABASE_ID}/query`,
+    `https://api.notion.com/v1/databases/${SDATABASE_ID}/query`,
     options
   );
 
-  const projects = await res.json();
+  const studies = await res.json();
 
-  const projectNames = projects.results.map(
-    (aProject) => aProject.properties.Name.title[0]?.plain_text
+  const studyNames = studies.results.map(
+    (aStudy) => aStudy.properties.Name.title[0]?.plain_text
   );
 
   return {
-    props: { projects }, // will be passed to the page component as props
+    props: { studies }, // will be passed to the page component as props
   };
 }
