@@ -5,7 +5,7 @@ export default function Footer() {
         <div>
           <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
             <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-              <span className="ml-3 text-xl">나주엽 Portfolio</span>
+              <span className="ml-3 text-xl">나주엽 PMtHk</span>
             </a>
             <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
               © 2020 Tailblocks —
@@ -18,7 +18,7 @@ export default function Footer() {
                 @knyttneve
               </a>
             </p>
-            <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            {/* <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
               <a className="text-gray-500">
                 <svg
                   fill="currentColor"
@@ -74,7 +74,7 @@ export default function Footer() {
                   <circle cx="4" cy="4" r="2" stroke="none"></circle>
                 </svg>
               </a>
-            </span>
+            </span> */}
           </div>
         </div>
       </footer>
