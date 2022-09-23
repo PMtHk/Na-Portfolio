@@ -13,7 +13,7 @@ export default function Hero() {
         </h1>
         <div className='flex-col s:flex-clg:flex lg:justify-center'>
           <Link href='/projects'>
-            <a className='inline-flex text-white bg-indigo-400 border-0 py-2 px-5 focus:outline-none dark:hover:bg-indigo-600 rounded text-md lg:text-lg dark:text-white'>
+            <a className='inline-flex text-white bg-blue-600 border-0 py-2 px-5 focus:outline-none dark:hover:bg-indigo-600 rounded text-md lg:text-lg dark:text-white'>
               프로젝트 보러가기
             </a>
           </Link>
