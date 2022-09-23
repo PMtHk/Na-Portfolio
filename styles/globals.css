@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 .bg-primary {
-  @apply bg-white dark:bg-slate-800;
+  @apply bg-slate-200 dark:bg-slate-800;
 }
 
 .btn-project {
   @apply inline-flex text-white dark:text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg;
 }
 
-.project-card {
-  @apply flex flex-col m-3 rounded-xl w-full
+.item-card {
+  @apply flex flex-col m-3 rounded-xl w-full bg-slate-100
             transition duration-300 transform border border-gray-300
             hover:scale-105
             hover:shadow-lg

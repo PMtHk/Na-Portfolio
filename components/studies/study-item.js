@@ -13,7 +13,7 @@ export default function StudyItem({ data }) {
   const end = data.properties.WorkPeriod?.date?.end;
 
   return (
-    <div className='project-card max-w-lg min-w-full'>
+    <div className='item-card max-w-lg min-w-full'>
       <Image
         className='rounded-t-xl'
         src={imgSrc}
