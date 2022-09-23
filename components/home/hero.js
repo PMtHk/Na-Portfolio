@@ -18,7 +18,7 @@ export default function Hero() {
             </a>
           </Link>
           <Link href='/studies'>
-            <a className='inline-flex text-white ml-2 bg-indigo-600 border-0 py-2 px-5 focus:outline-none dark:hover:bg-indigo-400 rounded text-md lg:text-lg dark:text-slate-400 '>
+            <a className='inline-flex text-white ml-2 bg-indigo-600 border-0 py-2 px-5 focus:outline-none hover:text-slate-400 dark:hover:bg-indigo-400 rounded text-md lg:text-lg dark:text-white '>
               스터디 보러가기
             </a>
           </Link>
