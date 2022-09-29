@@ -15,12 +15,12 @@ export default function Hero() {
 
           <div className='flex mt-3 justify-center'>
             <Link href='/projects'>
-              <a className='inline-flex text-white bg-blue-600 border-0 py-2 px-5 focus:outline-none dark:hover:bg-indigo-600 rounded text-md lg:text-xl dark:text-white'>
+              <a className='inline-flex text-white bg-blue-600 border-0 py-2 px-5 focus:outline-none dark:hover:bg-indigo-600 rounded text-md lg:text-lg xl:text-xl dark:text-white'>
                 프로젝트 보러가기
               </a>
             </Link>
             <Link href='/studies'>
-              <a className='inline-flex text-white ml-2 bg-indigo-600 border-0 py-2 px-5 focus:outline-none hover:text-slate-400 dark:hover:bg-indigo-400 rounded text-md lg:text-xl dark:text-white '>
+              <a className='inline-flex text-white ml-2 bg-indigo-600 border-0 py-2 px-5 focus:outline-none hover:text-slate-400 dark:hover:bg-indigo-400 rounded text-md lg:text-lg xl:text-xl dark:text-white '>
                 스터디 보러가기
               </a>
             </Link>
