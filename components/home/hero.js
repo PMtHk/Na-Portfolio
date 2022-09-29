@@ -6,7 +6,7 @@ export default function Hero() {
   return (
       <div className='container mx-auto mt-0 flex px-5 py-16 lg:flex-row flex-col items-center'>
         <div className='xl:flex-grow lg:w-1/2 xl:pr-24 lg:pr-16 flex flex-col lg:items-start lg:text-left mb-16 lg:mb-0 items-center text-center'>
-          <h1 className='title-font text-2xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-6xl mb-4 font-medium text-gray-900'>
+          <h1 className='title-font text-2xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl mb-4 font-medium text-gray-900'>
             안녕하세요. <br />
             <TypeAni />
             <br />
