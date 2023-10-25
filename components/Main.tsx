@@ -1,3 +1,5 @@
+import About from "./About";
+
 export const Main = ({
   handleScroll: throttleScroll,
 }: {
@@ -18,8 +20,9 @@ export const Main = ({
           <h2 className='text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only'>
             About
           </h2>
+          
         </div>
-        <p></p>
+        <About />
       </section>
       <section
         id='experience'
@@ -31,7 +34,6 @@ export const Main = ({
             Experience
           </h2>
         </div>
-        <p></p>
       </section>
       <section
         id='projects'
@@ -43,7 +45,6 @@ export const Main = ({
             Projects
           </h2>
         </div>
-        <p></p>
       </section>
       <p></p>
     </main>

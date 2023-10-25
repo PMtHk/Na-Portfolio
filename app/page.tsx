@@ -67,6 +67,7 @@ export default function Home(this: any) {
         }}
         className='pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute'
       ></div>
+      <span className='absolute right-0 bottom-0 hidden lg:block mr-4 mb-2 italic text-sm text-gray-400'>Last Updated: 2023-10-25</span>
       <div className='mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0 lg:h-screen'>
         <div className='lg:flex lg:justify-between lg:gap-4'>
           <Header activeLink={activeLink} />
