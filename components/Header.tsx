@@ -29,7 +29,7 @@ export const Header = ({
                   className='group flex items-center py-3 hover:transition-transform hover:translate-x-1'
                   href='#about'
                 >
-                  <span className={`nav-text text-xs ${activeLink === 'about' ? "text-emerald-300" : ""} font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200`}>
+                  <span className={`nav-text text-xs ${activeLink === 'about' ? "text-emerald-300" : "text-slate-500"} font-bold uppercase tracking-widest  group-hover:text-slate-200 group-focus-visible:text-slate-200`}>
                     #About
                   </span>
                 </Link>
@@ -39,7 +39,7 @@ export const Header = ({
                   className='group flex items-center py-3 hover:transition-transform hover:translate-x-1'
                   href='#experience'
                 >
-                  <span className={`nav-text text-xs ${activeLink === 'experience' ? "text-emerald-300" : ""} font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200`}>
+                  <span className={`nav-text text-xs ${activeLink === 'experience' ? "text-emerald-300" : "text-slate-500"} font-bold uppercase tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200`}>
                     #Experience
                   </span>
                 </Link>
@@ -49,7 +49,7 @@ export const Header = ({
                   className='group flex items-center py-3 hover:transition-transform hover:translate-x-1'
                   href='#projects'
                 >
-                  <span className={`nav-text text-xs ${activeLink === 'projects' ? "text-emerald-300" : ""} font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200`}>
+                  <span className={`nav-text text-xs ${activeLink === 'projects' ? "text-emerald-300" : "text-slate-500"} font-bold uppercase tracking-widest  group-hover:text-slate-200 group-focus-visible:text-slate-200`}>
                     #Projects
                   </span>
                 </Link>
