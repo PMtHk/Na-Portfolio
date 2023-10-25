@@ -29,6 +29,7 @@ export default function Home(this: any) {
     const aboutSection = document.getElementById('about');
     const experienceSection = document.getElementById('experience');
     const projectsSectionTop = document.getElementById('projects');
+    const othersSection = document.getElementById('others');
 
     const aboutSectionBottom = aboutSection?.getBoundingClientRect()?.bottom;
     const aboutSectionTop = aboutSection?.getBoundingClientRect()?.top;
@@ -36,6 +37,7 @@ export default function Home(this: any) {
       experienceSection?.getBoundingClientRect().bottom;
     const projectsSectionBottom =
       projectsSectionTop?.getBoundingClientRect().bottom;
+    const othersSectionBottom = othersSection?.getBoundingClientRect().bottom;
     if (
       aboutSectionTop !== undefined &&
       aboutSectionBottom !== undefined &&
@@ -54,6 +56,12 @@ export default function Home(this: any) {
       scrollY + aboutSectionTop <= projectsSectionBottom
     ) {
       setActiveLink('projects');
+    } else if (
+      aboutSectionTop !== undefined &&
+      othersSectionBottom !== undefined &&
+      scrollY + aboutSectionTop <= othersSectionBottom
+    ) {
+      setActiveLink('others');
     } else {
       setActiveLink('');
     }
@@ -67,7 +75,7 @@ export default function Home(this: any) {
         }}
         className='pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute'
       ></div>
-      <span className='absolute right-0 bottom-0 hidden lg:block mr-4 mb-2 italic text-sm text-gray-400'>Last Updated: 2023-10-25</span>
+      <span className='absolute right-0 bottom-0 hidden lg:block mr-4 mb-2 italic text-sm text-gray-400'>Last Updated: 2023-10-26</span>
       <div className='mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0 lg:h-screen'>
         <div className='lg:flex lg:justify-between lg:gap-4'>
           <Header activeLink={activeLink} />

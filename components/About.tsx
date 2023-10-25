@@ -2,7 +2,7 @@ const About = () => {
   return (
     <div>
       <h3 className='mt-2 text-xl font-bold text-slate-300'>Introduction</h3>
-      <p className='mt-4 first-letter:text-2xl text-slate-400'>
+      <p className='mt-4 pl-2 first-letter:text-2xl text-slate-400'>
         안녕하세요. 호기심이 많은 프론트엔드 개발자 나주엽입니다.
         <br />
         새로운 기술을 찾아보고 배우고, 직접 코드에 적용해보려 노력합니다.
@@ -11,7 +11,7 @@ const About = () => {
       </p>
 
       <h3 className='mt-12 text-xl font-bold text-slate-300'>Contact</h3>
-      <p className='mt-4 text-slate-400'>
+      <div className='mt-4 pl-2'>
         <a href='mailto:zooby88@naver.com' className='flex items-center'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -26,8 +26,8 @@ const About = () => {
           </svg>
           <span className='ml-4 text-slate-400'>zooby88@naver.com</span>
         </a>
-      </p>
-      <p className='mt-4 text-slate-400'>
+      </div>
+      <div className='mt-4 pl-2'>
         <div className='flex items-center'>
           <svg
             className='h-8 w-8 lg:h-11'
@@ -39,7 +39,7 @@ const About = () => {
           </svg>
           <span className='ml-4 text-slate-400'>010 - 2496 - 5168</span>
         </div>
-      </p>
+      </div>
     </div>
   );
 };

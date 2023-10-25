@@ -54,6 +54,16 @@ export const Header = ({
                   </span>
                 </Link>
               </li>
+              <li className='mt-4'>
+                <Link
+                  className='group flex items-center py-3 hover:transition-transform hover:translate-x-1'
+                  href='#others'
+                >
+                  <span className={`nav-text text-xs ${activeLink === 'others' ? "text-emerald-300" : "text-slate-500"} font-bold uppercase tracking-widest  group-hover:text-slate-200 group-focus-visible:text-slate-200`}>
+                    #Others
+                  </span>
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>
