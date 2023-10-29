@@ -11,6 +11,7 @@ const Project = ({
     img_src,
     img_link,
     skills,
+    live,
   },
 }: {
   item: {
@@ -22,6 +23,7 @@ const Project = ({
     img_src: string;
     img_link: string;
     skills: string[];
+    live: boolean;
   };
 }) => {
   return (
@@ -74,11 +76,16 @@ const Project = ({
                 </svg>
               </span>
             </a>
+            {live && (
+              <span className='ml-4 px-1 text-xs rounded border-red-300/70 bg-red-300/70'>
+                Live
+              </span>
+            )}
           </h3>
           {description.map((item, index) => {
             return (
               <p
-                key={index+1}
+                key={index + 1}
                 className='mt-2 text-sm leading-normal text-slate-400 break-keep'
               >
                 {item}
