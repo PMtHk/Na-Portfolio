@@ -4,10 +4,10 @@ const Others = () => {
       <h3 className='mt-2 text-xl font-bold text-slate-300'>Education</h3>
       <div className='mt-4 pl-2 flex'>
         <div className='w-1/4 flex flex-col justify-center items-start'>
-          <p className='text-slate-400 italic'>2018.03 - 2024.02</p>
+          <p className='text-slate-400 italic'>2018.03 ~ 현재</p>
         </div>
         <div className='w-3/4 flex justify-start items-center'>
-          <p className='text-slate-400'>상명대학교 컴퓨터과학과 (졸업예정)</p>
+          <p className='text-slate-400'>상명대학교 컴퓨터과학과 (24년 2월 졸업예정)</p>
         </div>
       </div>
 

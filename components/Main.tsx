@@ -1,5 +1,6 @@
 import About from './About';
 import Others from './Others';
+import Projects from './Projects';
 
 export const Main = ({
   handleScroll: throttleScroll,
@@ -24,7 +25,7 @@ export const Main = ({
         </div>
         <About />
       </section>
-      <section
+      {/* <section
         id='experience'
         className='mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24'
         aria-label='Expreience'
@@ -34,7 +35,7 @@ export const Main = ({
             Experience
           </h2>
         </div>
-      </section>
+      </section> */}
       <section
         id='projects'
         className='mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24'
@@ -45,6 +46,7 @@ export const Main = ({
             Projects
           </h2>
         </div>
+        <Projects />
       </section>
       <section
         id='others'
