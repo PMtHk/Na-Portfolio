@@ -1,16 +1,15 @@
 import Link from 'next/link';
 
-export const Header = ({
-  activeLink,
-}: {
-  activeLink: string;
-}) => {
+export const Header = ({ activeLink }: { activeLink: string }) => {
   return (
     <header className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24'>
       <div className='w-full h-full flex flex-col justify-between'>
         <div>
           <div>
-            <h1 id='header' className='font-bold text-[28px] md:text-[32px] text-[#E3E8F0] xl:text-[48px]'>
+            <h1
+              id='header'
+              className='font-bold text-[28px] md:text-[32px] text-[#E3E8F0] xl:text-[48px]'
+            >
               <a href='/'>나주엽 | Jooyeob Na</a>
             </h1>
             <h2 className='mt-3 text-xl text-[#E3E8F0]'>
@@ -29,7 +28,13 @@ export const Header = ({
                   className='group flex items-center py-3 hover:transition-transform hover:translate-x-1'
                   href='#about'
                 >
-                  <span className={`nav-text text-xs ${activeLink === 'about' ? "text-emerald-300" : "text-slate-500"} font-bold uppercase tracking-widest  group-hover:text-slate-200 group-focus-visible:text-slate-200`}>
+                  <span
+                    className={`nav-text text-xs ${
+                      activeLink === 'about'
+                        ? 'text-emerald-300'
+                        : 'text-slate-500'
+                    } font-bold uppercase tracking-widest  group-hover:text-slate-200 group-focus-visible:text-slate-200`}
+                  >
                     #About
                   </span>
                 </Link>
@@ -39,7 +44,13 @@ export const Header = ({
                   className='group flex items-center py-3 hover:transition-transform hover:translate-x-1'
                   href='#experience'
                 >
-                  <span className={`nav-text text-xs ${activeLink === 'experience' ? "text-emerald-300" : "text-slate-500"} font-bold uppercase tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200 line-through`}>
+                  <span
+                    className={`nav-text text-xs ${
+                      activeLink === 'experience'
+                        ? 'text-emerald-300'
+                        : 'text-slate-500'
+                    } font-bold uppercase tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200 line-through`}
+                  >
                     #Experience
                   </span>
                 </Link>
@@ -49,7 +60,13 @@ export const Header = ({
                   className='group flex items-center py-3 hover:transition-transform hover:translate-x-1'
                   href='#projects'
                 >
-                  <span className={`nav-text text-xs ${activeLink === 'projects' ? "text-emerald-300" : "text-slate-500"} font-bold uppercase tracking-widest  group-hover:text-slate-200 group-focus-visible:text-slate-200`}>
+                  <span
+                    className={`nav-text text-xs ${
+                      activeLink === 'projects'
+                        ? 'text-emerald-300'
+                        : 'text-slate-500'
+                    } font-bold uppercase tracking-widest  group-hover:text-slate-200 group-focus-visible:text-slate-200`}
+                  >
                     #Projects
                   </span>
                 </Link>
@@ -59,7 +76,13 @@ export const Header = ({
                   className='group flex items-center py-3 hover:transition-transform hover:translate-x-1'
                   href='#others'
                 >
-                  <span className={`nav-text text-xs ${activeLink === 'others' ? "text-emerald-300" : "text-slate-500"} font-bold uppercase tracking-widest  group-hover:text-slate-200 group-focus-visible:text-slate-200`}>
+                  <span
+                    className={`nav-text text-xs ${
+                      activeLink === 'others'
+                        ? 'text-emerald-300'
+                        : 'text-slate-500'
+                    } font-bold uppercase tracking-widest  group-hover:text-slate-200 group-focus-visible:text-slate-200`}
+                  >
                     #Others
                   </span>
                 </Link>
@@ -105,19 +128,21 @@ export const Header = ({
             </a>
           </li>
           <li>
-            <span className='sr-only'>Download Resume</span>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 1024 1024'
-              version='1.1'
-              fill='#E3E8F0'
-              className='h-8 w-8 lg:h-11 lg:w-11'
-              aria-hidden='true'
-            >
-              <path d='M334.336 616.3456c0 11.5712 9.5232 21.0944 21.0944 21.0944h315.4944c11.5712 0 21.0944-9.5232 21.0944-21.0944s-9.5232-21.0944-21.0944-21.0944H355.4304c-11.6736 0-21.0944 9.5232-21.0944 21.0944zM670.9248 702.0544H355.4304c-11.5712 0-21.0944 9.5232-21.0944 21.0944s9.5232 21.0944 21.0944 21.0944h315.4944c11.5712 0 21.0944-9.5232 21.0944-21.0944s-9.5232-21.0944-21.0944-21.0944z' />
-              <path d='M586.9568 165.888H272.4864c-23.2448 0-42.1888 18.944-42.1888 42.1888v607.8464c0 23.2448 18.944 42.1888 42.1888 42.1888H751.616c23.2448 0 42.1888-18.944 42.1888-42.1888V372.736l-206.848-206.848z m27.4432 87.1424l97.1776 97.1776h-89.9072c-3.8912 0-7.2704-3.3792-7.2704-7.2704v-89.9072z m137.1136 562.7904s0 0.1024 0 0l-479.0272 0.1024s-0.1024 0-0.1024-0.1024V208.1792s0-0.1024 0.1024-0.1024h297.984l1.6384 1.6384v133.12c0 27.2384 22.3232 49.4592 49.4592 49.4592h129.9456v423.5264z' />
-              <path d='M428.8512 388.7104c37.1712 0 67.2768-30.1056 67.2768-67.2768 0-37.1712-30.1056-67.2768-67.2768-67.2768S361.472 284.16 361.472 321.4336c0 37.1712 30.1056 67.2768 67.3792 67.2768z m0-97.6896c16.7936 0 30.4128 13.6192 30.4128 30.4128s-13.6192 30.4128-30.4128 30.4128-30.4128-13.6192-30.4128-30.4128 13.6192-30.4128 30.4128-30.4128zM355.4304 504.7296c11.6736 0 21.0944-9.4208 21.0944-21.0944 0-22.8352 23.9616-42.1888 52.3264-42.1888s52.3264 19.2512 52.3264 42.1888c0 11.6736 9.4208 21.0944 21.0944 21.0944s21.0944-9.4208 21.0944-21.0944c0-46.4896-42.3936-84.3776-94.5152-84.3776s-94.5152 37.888-94.5152 84.3776c0 11.6736 9.4208 21.0944 21.0944 21.0944z' />
-            </svg>
+            <a href="/JooyeobNa.pdf" download="JooyeobNa">
+              <span className='sr-only'>Download Resume</span>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 1024 1024'
+                version='1.1'
+                fill='#E3E8F0'
+                className='h-8 w-8 lg:h-11 lg:w-11'
+                aria-hidden='true'
+              >
+                <path d='M334.336 616.3456c0 11.5712 9.5232 21.0944 21.0944 21.0944h315.4944c11.5712 0 21.0944-9.5232 21.0944-21.0944s-9.5232-21.0944-21.0944-21.0944H355.4304c-11.6736 0-21.0944 9.5232-21.0944 21.0944zM670.9248 702.0544H355.4304c-11.5712 0-21.0944 9.5232-21.0944 21.0944s9.5232 21.0944 21.0944 21.0944h315.4944c11.5712 0 21.0944-9.5232 21.0944-21.0944s-9.5232-21.0944-21.0944-21.0944z' />
+                <path d='M586.9568 165.888H272.4864c-23.2448 0-42.1888 18.944-42.1888 42.1888v607.8464c0 23.2448 18.944 42.1888 42.1888 42.1888H751.616c23.2448 0 42.1888-18.944 42.1888-42.1888V372.736l-206.848-206.848z m27.4432 87.1424l97.1776 97.1776h-89.9072c-3.8912 0-7.2704-3.3792-7.2704-7.2704v-89.9072z m137.1136 562.7904s0 0.1024 0 0l-479.0272 0.1024s-0.1024 0-0.1024-0.1024V208.1792s0-0.1024 0.1024-0.1024h297.984l1.6384 1.6384v133.12c0 27.2384 22.3232 49.4592 49.4592 49.4592h129.9456v423.5264z' />
+                <path d='M428.8512 388.7104c37.1712 0 67.2768-30.1056 67.2768-67.2768 0-37.1712-30.1056-67.2768-67.2768-67.2768S361.472 284.16 361.472 321.4336c0 37.1712 30.1056 67.2768 67.3792 67.2768z m0-97.6896c16.7936 0 30.4128 13.6192 30.4128 30.4128s-13.6192 30.4128-30.4128 30.4128-30.4128-13.6192-30.4128-30.4128 13.6192-30.4128 30.4128-30.4128zM355.4304 504.7296c11.6736 0 21.0944-9.4208 21.0944-21.0944 0-22.8352 23.9616-42.1888 52.3264-42.1888s52.3264 19.2512 52.3264 42.1888c0 11.6736 9.4208 21.0944 21.0944 21.0944s21.0944-9.4208 21.0944-21.0944c0-46.4896-42.3936-84.3776-94.5152-84.3776s-94.5152 37.888-94.5152 84.3776c0 11.6736 9.4208 21.0944 21.0944 21.0944z' />
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
