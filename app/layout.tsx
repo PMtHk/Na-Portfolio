@@ -5,8 +5,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Na Jooyeob | 프론트엔드 개발자',
-  description: '프론트엔드 개발자를 꿈꾸는 호기심이 많은 나주엽입니다.',
+  title: '나주엽 | Na Jooyeob',
+  description: '나주엽 | 포트폴리오',
 };
 
 export default function RootLayout({

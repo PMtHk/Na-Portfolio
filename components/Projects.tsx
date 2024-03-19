@@ -6,9 +6,9 @@ import Project from './Project';
 const Projects = () => {
   return (
     <div>
-      <h3 className='mt-2 mb-6 text-xl font-bold text-slate-300 hidden lg:block'>
+      <h2 className='mt-2 mb-6 text-2xl font-bold text-slate-300 hidden lg:block'>
         Projects
-      </h3>
+      </h2>
       <ul >
         {
           projects.map((item) => {
