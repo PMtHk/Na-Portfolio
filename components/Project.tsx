@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SkillTag from "./SkillTag";
+import Link from "next/link";
 
 const Project = ({
   item: {
@@ -30,7 +31,7 @@ const Project = ({
     <li className="mb-10">
       <div className="p-4 flex group relative gap-4 pl-2 transition-all lg:hover:opacity-100 lg:hover:rounded-xl lg:hover:bg-slate-800/20 lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg">
         <div className="w-1/4 flex-col">
-          <a
+          <Link
             className="font-medium leading-tight text-slate-300 hover:text-teal-300 focus-visible:text-teal-300"
             href={img_link}
             target="_blank"
@@ -40,11 +41,11 @@ const Project = ({
             <Image
               alt={project}
               src={img_src}
-              width={150}
-              height={150}
+              width={200}
+              height={120}
               className="border-2 rounded-lg border-slate-400/10 group-hover:-translate-y-0.5 group-hover:border-slate-300/20"
             />
-          </a>
+          </Link>
           <p className="pl-2 pt-3 text-slate-400 italic">{date_start}</p>
           <p className="pl-4 pt-1 text-slate-400 italic text-right">
             ~ {date_end}

@@ -13,7 +13,7 @@ export const projects: Project[] = [
     date_start: "2024-01",
     date_end: "개발 중",
     img_src: "/cross-online.png",
-    img_link: "https://gaoncare.kr",
+    img_link: "https://github.com/orgs/CrosS-Puzzle/repositories",
     skills: [
       "React.js",
       "React-Query",
