@@ -85,7 +85,7 @@ const Projects = () => {
                         src={project.imgSrc}
                         width={200}
                         height={120}
-                        className="border-2 rounded-lg border-slate-400/10 group-hover:-translate-y-0.5 group-hover:border-slate-300/20"
+                        className="border-2 rounded-lg border-slate-500/50 group-hover:border-slate-300/60 bg-white"
                       />
                     </Link>
                   </div>

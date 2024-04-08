@@ -23,7 +23,7 @@ export default function Header({ activeLink }: { activeLink: string }) {
                 .map((menu) => (
                   <li key={menu.id} className="mt-4">
                     <Link
-                      className="group flex items-center py-1 hover:transition-transform hover:translate-x-1"
+                      className="group flex items-center py-1 hover:transition-transform hover:translate-x-1 dark:"
                       href={menu.link}
                     >
                       <span
@@ -38,7 +38,7 @@ export default function Header({ activeLink }: { activeLink: string }) {
                           activeLink === menu.id
                             ? "text-emerald-300"
                             : "text-slate-500"
-                        } font-bold uppercase tracking-widest  group-hover:text-slate-200 group-focus-visible:text-slate-200`}
+                        } font-bold uppercase tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200`}
                       >
                         {menu.text}
                       </span>
