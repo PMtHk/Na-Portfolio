@@ -1,10 +1,10 @@
 "use client";
 
 import Header from "@/features/header/Header";
-import { Fragment, useEffect, useState } from "react";
-import { Main } from "@/components/Main";
+import { useEffect, useState } from "react";
 import useThrottle from "@/utils/useThrottle";
 import LastUpdated from "./LastUpdated";
+import Main from "@/features/landing/main";
 
 export default function Home(this: any) {
   // for scroll event -----------------------------------
@@ -28,7 +28,7 @@ export default function Home(this: any) {
     const aboutSectionTop = aboutSection?.getBoundingClientRect()?.top;
 
     // work experience
-    const experienceSection = document.getElementById("experience");
+    const experienceSection = document.getElementById("careers");
     const experienceSectionBottom =
       experienceSection?.getBoundingClientRect().bottom;
 
@@ -57,7 +57,7 @@ export default function Home(this: any) {
       experienceSectionBottom !== undefined &&
       scrollY + aboutSectionTop <= experienceSectionBottom
     ) {
-      setActiveLink("experience");
+      setActiveLink("careers");
     } else if (
       aboutSectionTop !== undefined &&
       projectsSectionBottom !== undefined &&
@@ -76,7 +76,7 @@ export default function Home(this: any) {
   }, [scrollY]);
 
   return (
-    <Fragment>
+    <>
       <LastUpdated />
       <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0 lg:h-screen">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-4">
@@ -84,6 +84,6 @@ export default function Home(this: any) {
           <Main handleScroll={throttleScroll} />
         </div>
       </div>
-    </Fragment>
+    </>
   );
 }

@@ -16,13 +16,11 @@ export default function Educations() {
             <div className="h-fit flex gap-x-2">
               <div className="w-1/4 flex flex-col justify-center text-sm">
                 <p className="text-slate-400 text-left">
-                  {education.dateStart}
+                  {education.dateStart} ~ {education.dateEnd}
                 </p>
-                <p className="text-slate-400 text-right">
-                  - {education.dateEnd}
-                </p>
+               
               </div>
-              <div className="w-3/4 flex justify-start items-start">
+              <div className="w-3/4 flex justify-start items-start border-l border-slate-400 pl-2">
                 <p className="text-slate-400">{education.title}</p>
               </div>
             </div>

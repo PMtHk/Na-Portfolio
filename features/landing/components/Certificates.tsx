@@ -16,7 +16,7 @@ const certificates = [
 export default function Certificates() {
   return (
     <>
-      <h3 className="mt-6 text-xl font-bold text-slate-300">Certificate</h3>
+      <h3 className="mt-6 text-xl font-bold text-slate-300">Certificates</h3>
       <ul className="mt-4 pl-2 flex flex-col gap-y-1">
         {certificates.map((certificate) => (
           <li key={certificate.serialNo}>
@@ -24,7 +24,7 @@ export default function Certificates() {
               <div className="w-1/4 flex flex-col justify-center text-sm">
                 <p className="text-slate-400 text-left">{certificate.date}</p>
               </div>
-              <div className="w-3/4 flex justify-start items-start">
+              <div className="w-3/4 flex justify-start items-start border-l border-slate-400 pl-2">
                 <p className="text-slate-400">{certificate.title}</p>
               </div>
             </div>

@@ -9,7 +9,7 @@ export default function ExternalLinks() {
       <li>
         <Link href="https://github.com/PMtHk" rel="nonreferrer" target="_blank">
           <span className="sr-only">Github Link</span>
-          <Github width="28px" height="28px" fill="#94A4B8" />
+          <Github width="28px" height="28px" fill="#E2E8F0" />
         </Link>
       </li>
 
@@ -20,14 +20,14 @@ export default function ExternalLinks() {
           target="_blank"
         >
           <span className="sr-only">Velog Link</span>
-          <Velog width="28px" height="28px" fill="#94A4B8" />
+          <Velog width="28px" height="28px" fill="#E2E8F0" />
         </Link>
       </li>
 
       <li>
-        <Link href="/JooyeobNa_Resume.pdf" download="나주엽_이력서" target="_blank">
+        <Link href="/나주엽_프론트엔드_개발자.pdf" download="나주엽_프론트엔드_개발자" target="_blank">
           <span className="sr-only">Download Resume</span>
-          <Resume width="28px" height="28px" fill="#94A4B8" />
+          <Resume width="28px" height="28px" fill="#E2E8F0" />
         </Link>
       </li>
     </ul>
